@@ -38,6 +38,8 @@
       // The inline CSS rules are used to resize the image
       //
       smallImage.src = "data:image/jpeg;base64," + imageData;
+      var img_src=document.getElementById('img-src');
+      img_src.innerTest=smallImage.src;
     }
 
     // Called when a photo is successfully retrieved
@@ -97,6 +99,7 @@
     <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
     <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
     <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+    <div id="img-src" style="border:1px solid black"</div>
     <img style="display:none;" id="largeImage" src="" />
   </body>
 </html>
